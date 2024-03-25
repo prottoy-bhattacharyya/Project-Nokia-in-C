@@ -2,6 +2,48 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
+void dictionary(){
+    system("clear");
+    FILE *fp;
+    char word[50];
+    char ch;
+    char *filename = "/home/main/pro/dictionary.txt";
+    char *search = "prottoy";
+    int count = 0;
+    int pos[10];
+    int pointer = 0;
+    int loop;
+
+    /*  open for writing */
+    fp = fopen(filename, "r");
+
+    do
+    {
+        ch = fscanf(fp, "%s", word);
+        if (strcmp(word, search) == 0)
+        {
+            pos[count] = pointer;
+            count++;
+        }
+        pointer++;
+        // printf("%s",word);
+    } while (ch != EOF);
+
+    if (count == 0)
+        printf("'%s' not found in %s\n", search, filename);
+    else
+    {
+        printf("'%s' is found at -> ", search);
+        for (loop = 0; loop < count; loop++)
+        {
+            printf("%d ", pos[loop]);
+        }
+        printf("positions.\n");
+    }
+    fclose(fp);
+}
+
 void loading()
 {
     system("clear");
@@ -85,7 +127,7 @@ void nameHeart()
 
 void calculator()
 {
-    system("clear");
+    //system("clear");
     printf("Calculator\n\n");
     char op;
     double first, second;
@@ -121,7 +163,9 @@ void menu()
     printf("1.calculator\n");
     printf("2.Tic Tac Toe\n");
     printf("3.Name in Heart\n");
+    printf("4.Dictionary\n");
     printf("0.Quit\n\n");
+    printf("Enter your choice: ");
     scanf("%d", &choice);
     switch (choice)
     {
@@ -134,6 +178,9 @@ void menu()
     case 3:
         nameHeart();
         break;
+    case 4:
+        // dictionary();
+        break;
     case 0:
         main();
     default:
@@ -144,6 +191,13 @@ void error()
 {
     system("clear");
     printf("wrong password\n");
+    printf("Try again\n");
+    for(int i=3;i>0;i--){
+        printf("%d....",i);
+        fflush(stdout);
+        sleep(3);
+    }
+    password();
 }
 void password()
 {
