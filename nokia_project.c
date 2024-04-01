@@ -3,6 +3,10 @@
 #include <string.h>
 #include <time.h>
 
+void clear (void)
+{
+    while ( getchar() != '\n' ); //clear input buffer
+}
 void dictionary(){
     system("clear");
     FILE *fp;
@@ -58,6 +62,7 @@ void loading()
 void nameHeart()
 {
     system("clear");
+    clear();
     printf("Name Heart\n\n");
     int i, j, n;
     char name[50];
@@ -127,7 +132,8 @@ void nameHeart()
 
 void calculator()
 {
-    //system("clear");
+    system("clear");
+    clear();
     printf("Calculator\n\n");
     char op;
     double first, second;
