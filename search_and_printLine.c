@@ -6,14 +6,14 @@ int main()
     FILE *fp;
     char word[50];
     char ch;
-    char *filename = "C:/Users/User/Desktop/pro/dictionary.txt";
+    char *filename = "/home/main/pro/dictionary.txt";
     char *search = "you";
     int count = 1;
     int pos[10];
     int pointer = 0;
     int loop;
     char line[256];
-    int lineNum=0;
+    int lineNum = 1;
     /*  open for writing */
     fp = fopen(filename, "r");
 
@@ -22,26 +22,20 @@ int main()
         ch = fscanf(fp, "%s", word);
         if (strcmp(word, search) == 0)
         {
-            // pos[count] = pointer;
-            // count++;
             break;
         }
-        // pointer++;
-        lineNum++;
+        else lineNum++;
     } while (ch != EOF);
-printf("line number %d", lineNum);
+    printf("%d\n",lineNum);
     if (lineNum > 4 )
-        printf("'%s' not found in %s\n", search, filename);
+        printf("'%s' not found in Dictionary\n", search, filename);
     else
     {
-       /* or other suitable maximum line size */
         while (fgets(line, sizeof line, fp) != NULL) /* read a line */
         {
-            if (count == lineNum)
+            if (count == lineNum-2)
             {
-                // use line or in a function return it
-                //             //in case of a return first close the file with "fclose(file);"
-                printf("\n str %s ", line);
+                printf("\n %s means %s \n", search,line);
                 fclose(fp);
                 return 0;
             }
