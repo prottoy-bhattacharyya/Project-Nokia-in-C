@@ -42,9 +42,16 @@ void dictionary(){
             // Print only the first occurrence (optional)
         }
     }
-
     // Close the file
     fclose(file);
+    int choice;
+    printf("\n\n1.search again: ");
+    printf("\n0.menu\n");
+    scanf("%d", &choice);
+    switch (choice) {
+    case 1: dictionary();
+    case 0: menu();
+    }
 }
 
 void loading()
@@ -200,7 +207,7 @@ void error()
     for(int i=3;i>0;i--){
         printf("%d....",i);
         fflush(stdout);
-        sleep(3);
+        sleep(1);
     }
     password();
 }
