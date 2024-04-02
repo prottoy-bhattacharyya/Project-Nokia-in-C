@@ -8,44 +8,43 @@ void clear (void)
     while ( getchar() != '\n' ); //clear input buffer
 }
 void dictionary(){
+    clear();
     system("clear");
-    FILE *fp;
-    char word[50];
-    char ch;
-    char *filename = "/home/main/pro/dictionary.txt";
-    char *search = "prottoy";
-    int count = 0;
-    int pos[10];
-    int pointer = 0;
-    int loop;
+    int MAX_LINE_LENGTH = 256;
+    FILE *file;
+    char filename[MAX_LINE_LENGTH];
+    char word[MAX_LINE_LENGTH];
+    char line[MAX_LINE_LENGTH];
 
-    /*  open for writing */
-    fp = fopen(filename, "r");
-
-    do
-    {
-        ch = fscanf(fp, "%s", word);
-        if (strcmp(word, search) == 0)
-        {
-            pos[count] = pointer;
-            count++;
-        }
-        pointer++;
-        // printf("%s",word);
-    } while (ch != EOF);
-
-    if (count == 0)
-        printf("'%s' not found in %s\n", search, filename);
-    else
-    {
-        printf("'%s' is found at -> ", search);
-        for (loop = 0; loop < count; loop++)
-        {
-            printf("%d ", pos[loop]);
-        }
-        printf("positions.\n");
+    // Get word to search from user
+    printf("Enter the word to search: ");
+    if (scanf("%s", word) != 1) {
+        printf("Error reading word.\n");
+        return 1;
     }
-    fclose(fp);
+
+    // Open the file for reading
+    file = fopen("/home/main/pro/dictionary.txt", "r");
+    if (file == NULL) {
+        printf("Error opening file: %s\n", filename);
+        return 1;
+    }
+
+    // Read the file line by line
+    while (fgets(line, MAX_LINE_LENGTH, file)) {
+        // Remove trailing newline (if present)
+        line[strcspn(line, "\n")] = '\0';
+
+        // Check if the word is present in the line
+        if (strstr(line, word) != NULL) {
+            printf("%s\n",line);
+            // break;  
+            // Print only the first occurrence (optional)
+        }
+    }
+
+    // Close the file
+    fclose(file);
 }
 
 void loading()
@@ -185,7 +184,7 @@ void menu()
         nameHeart();
         break;
     case 4:
-        // dictionary();
+        dictionary();
         break;
     case 0:
         main();
