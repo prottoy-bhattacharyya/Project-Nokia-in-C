@@ -6,6 +6,15 @@ Created by Prottoy Vhattacharyya, Sanjid Hossain joy and Sanjita */
 #include <string.h>
 #include <time.h>
 
+void clear (void);
+void dictionary();
+void loading();
+void nameHeart();
+void calculator();
+void menu();
+void error();
+void password();
+
 void clear (void)
 {
     while ( getchar() != '\n' ); //clear input buffer
