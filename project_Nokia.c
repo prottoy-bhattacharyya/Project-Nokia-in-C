@@ -1,5 +1,5 @@
 /*Project Nokia
-Created by Prottoy Vhattacharyya, Sanjid Hossain joy and Sanjita 
+Created by Prottoy Vhattacharyya, Turzo,  Sanjid Hossain joy and Rifa Sanjida 
 */
 
 #include <stdio.h>
