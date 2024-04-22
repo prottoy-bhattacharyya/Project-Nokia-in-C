@@ -28,6 +28,7 @@ void mathGame(){
     system("clear");
     system("cls");
     clear();
+    system("Color 0B");
     printf("Math Game: \n\n");
     int a,b,c,d,z,m,temp;
     time_t t;
@@ -156,6 +157,7 @@ void timer(){
 void clk(){
     system("clear");
     system("cls");
+    system("Color 0B");
     // date and time
     time_t t;
     time(&t);
@@ -178,6 +180,7 @@ void dictionary(){
     clear();
     system("clear");
     system("cls");
+    system("Color 0C");
     int MAX_LINE_LENGTH = 256;
     FILE *file;
     char filename[MAX_LINE_LENGTH];
@@ -241,6 +244,7 @@ void nameHeart()
     system("clear");
     system("cls");
     clear();
+    system("Color 0D");
     printf("Name Heart\n\n");
     int i, j, n;
     char name[50];
@@ -320,6 +324,7 @@ void calculator()
     system("clear");
     system("cls");
     clear();
+    system("Color 0E");
     printf("Calculator\n\n");
     char op;
     double first, second;
@@ -359,6 +364,7 @@ void menu()
     int choice;
     system("clear");
     system("cls");
+    system("Color 0A");
     printf("Main Menu\n\n");
     printf("1.calculator\n");
     printf("2.Clock\n");
@@ -395,6 +401,7 @@ void error()
 {
     system("clear");
     system("cls");
+    system("Color 0C");
     printf("wrong password\n");
     printf("Try again\n");
     for(int i=3;i>0;i--){
@@ -408,6 +415,7 @@ void password()
 {
     system("clear");
     system("cls");
+    system("Color 0E");
     char name[50], pass[50];
     printf("Username: ");
     gets(name);
