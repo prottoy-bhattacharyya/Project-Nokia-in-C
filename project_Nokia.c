@@ -15,11 +15,165 @@ void calculator();
 void menu();
 void error();
 void password();
+void clk();
+void timer();
+void stopWatch();
+void mathGame();
 
-void clear (void)
-{
+void clear (void){
     while ( getchar() != '\n' ); //clear input buffer
 }
+
+void mathGame(){
+    system("clear");
+    system("cls");
+    clear();
+    printf("Math Game: \n\n");
+    int a,b,c,d,z,m,temp;
+    time_t t;
+    srand((unsigned) time(&t));
+    while(1)
+    {
+        z=rand()%5+1;
+        a=rand()%50+1;
+        b=rand()%50+1;
+        if(a<b)
+        {
+            temp=a;
+            a=b;
+            b=temp;
+        }
+        if(z==1)
+        {
+            c=a+b;
+            printf("%d + %d = ", a,b);
+            if(scanf("%d", &d)==0) mathGame();
+            if(c==d)
+            {
+                printf("Correct answer\n");
+            }
+            else
+            {
+                printf("Incorrect answer\nThe answer is %d\n", c);
+            }
+        }
+        else if(z==2)
+        {
+            c=a-b;
+            printf("%d - %d = ", a,b);
+            if(scanf("%d", &d)==0) mathGame();
+            if(c==d)
+            {
+                printf("Correct answer\n");
+            }
+            else
+            {
+                printf("Incorrect answer\nThe answer is %d\n", c);
+            }
+        }
+        else if(z==3)
+        {
+            c=a*b;
+            printf("%d * %d = ", a,b);
+            if(scanf("%d", &d)==0) mathGame();
+            if(c==d)
+            {
+                printf("Correct answer\n");
+            }
+            else
+            {
+                printf("Incorrect answer\nThe answer is %d\n", c);
+            }
+        }
+        else if(z==4)
+        {
+            if(a%b!=0)
+            {
+                m=a%b;
+                a-=m;
+            }
+            c=a/b;
+            printf("%d / %d = ", a,b);
+            if(scanf("%d", &d)==0) mathGame();
+            if(c==d)
+            {
+                printf("Correct answer\n");
+            }
+            else
+            {
+                printf("Incorrect answer\nThe answer is %d\n", c);
+            }
+        }
+    }
+}
+
+void stopWatch(){
+    system("clear");
+    system("cls");
+    clear();
+    char input;
+    int run=0;
+    double start,stop;
+    printf("press enter to start/stop the timer\nAnd 0 to go back\n");
+    while(1){
+        
+        input = getchar();
+        if(input == '\n' && run == 0){
+            printf("timer started...");
+            start = clock()/(double)CLOCKS_PER_SEC;
+            run =1;
+        }
+        else if(input == '\n' && run == 1){
+            stop = clock()/(double)CLOCKS_PER_SEC;
+            printf("timer stoped\n");
+            printf("%lf seconds\n",(stop-start));
+            run = 0;
+        }
+        else if(input == '0') break;
+    }
+    clk();
+}
+void timer(){
+    system("clear");
+    system("cls");
+    clear();
+    int end;
+    printf("input time in seconds :");
+    scanf("%d",&end);
+    for(int i=end;i>=0;i--){
+        printf("%d ",i);
+        sleep(1);
+    }
+    printf("\n%d seconds has passed\n",end);
+    printf("\n1.reset\n0.go back");
+    int choice;
+    scanf("%d",&choice);
+    switch(choice){
+        case 1: timer();
+        case 0: clk();
+    }
+}
+void clk(){
+    system("clear");
+    system("cls");
+    // date and time
+    time_t t;
+    time(&t);
+    printf("%s", ctime(&t));
+    printf("\n\n");
+    printf("1.stop Watch\n");
+    printf("2.Timer\n");
+    printf("0.Menu\n\n");
+    int choice;
+    scanf("%d",&choice);
+    switch(choice){
+        case 1: stopWatch();break;
+        case 2: timer(); break;
+        case 0: menu(); break;
+
+    }
+}
+
 void dictionary(){
     clear();
     system("clear");
@@ -34,14 +188,16 @@ void dictionary(){
     printf("Enter the word to search: ");
     if (scanf("%s", word) != 1) {
         printf("Error reading word.\n");
-        return 1;
+        sleep(2);
+        dictionary();
     }
 
     // Open the file for reading
-    file = fopen("/home/main/pro/dictionary.txt", "r");
+    file = fopen("C:/Users/BUBT/Desktop/pro/dictionary.txt", "r");
     if (file == NULL) {
         printf("Error opening file: %s\n", filename);
-        return 1;
+        sleep(2);
+        dictionary();
     }
 
     // Read the file line by line
@@ -150,6 +306,13 @@ void nameHeart()
 
         printf("\n");
     }
+    int choich;
+    printf("\n\n1.again\n0.menu\n");
+    scanf("%d", &choich);
+    switch (choich){
+        case 1: nameHeart();
+        case 0: menu();
+    }
 }
 
 void calculator()
@@ -183,17 +346,25 @@ void calculator()
         printf("operator is not correct\n");
         calculator();
     }
+    int choich;
+    printf("\n\n1.again\n0.menu\n");
+    scanf("%d", &choich);
+    switch (choich){
+        case 1: calculator();
+        case 0: menu();
+    }
 }
 void menu()
 {
     int choice;
     system("clear");
     system("cls");
-    printf("Menu\n\n");
+    printf("Main Menu\n\n");
     printf("1.calculator\n");
-    printf("2.Tic Tac Toe\n");
+    printf("2.Clock\n");
     printf("3.Name in Heart\n");
     printf("4.Dictionary\n");
+    printf("5.Math Game\n");
     printf("0.Quit\n\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
@@ -202,14 +373,17 @@ void menu()
     case 1:
         calculator();
         break;
-    // case 2:
-    //     // ticTacToe();
-    //     break;
+    case 2:
+        clk();
+        break;
     case 3:
         nameHeart();
         break;
     case 4:
         dictionary();
+        break;
+    case 5:
+        mathGame();
         break;
     case 0:
         main();
