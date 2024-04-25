@@ -6,6 +6,8 @@ Created by Prottoy Vhattacharyya, Turzo,  Sanjid Hossain joy and Rifa Sanjida
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <windows.h>
+#include <unistd.h>
 
 void clear(void);
 void dictionary();
@@ -233,7 +235,7 @@ void dictionary()
     }
 
     // Open the file for reading
-    file = fopen("C:/Users/User/Desktop/pro/SDP-project-main/dictionary.txt", "r");
+    file = fopen("C:/Users/BUBT/Downloads/dictionary.txt", "r");
     // file = fopen("C:/Users/BUBT/Desktop/pro/dictionary.txt", "r");
     if (file == NULL)
     {
