@@ -6,8 +6,6 @@ Created by Prottoy Vhattacharyya, Turzo,  Sanjid Hossain joy and Rifa Sanjida
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <windows.h>
-#include <unistd.h>
 
 void clear(void);
 void dictionary();
@@ -21,12 +19,20 @@ void clk();
 void timer();
 void stopWatch();
 void mathGame();
+void quit();
 
 void clear(void)
 {
-    while (getchar() != '\n'); // clear input buffer
+    // while (getchar() != '\n'); // clear input buffer
+    fflush(stdin);
 }
 
+void quit(){
+    system("clear");
+    system("cls");
+    printf("========Successfully Exited========\n");
+    exit(0);
+}
 void mathGame()
 {
     system("clear");
@@ -235,7 +241,7 @@ void dictionary()
     }
 
     // Open the file for reading
-    file = fopen("C:/Users/BUBT/Downloads/dictionary.txt", "r");
+    file = fopen("C:/Users/User/Desktop/pro/SDP-project-main/dictionary.txt", "r");
     // file = fopen("C:/Users/BUBT/Desktop/pro/dictionary.txt", "r");
     if (file == NULL)
     {
@@ -375,33 +381,25 @@ void calculator()
     clear();
     system("Color 0E");
     printf("Calculator\n\n");
+    double a, c;
     char op;
-    double first, second;
-    printf("Enter an operator (+, -, *, /): ");
-    scanf("%c", &op);
-    printf("Enter two operands: ");
-    scanf("%lf %lf", &first, &second);
-
-    switch (op)
-    {
-    case '+':
-        printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
-        break;
-    case '-':
-        printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
-        break;
-    case '*':
-        printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
-        break;
-    case '/':
-        printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
-        break;
-    default:
-        printf("operator is not correct\n");
-        calculator();
+    while ((scanf("%lf %c %lf", &a, &op, &c))!=0){
+        switch(op){
+            case '+': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, a+c); break;
+            case '-': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, a-c); break;
+            case '*': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, a*c); break;
+            case '/': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, a/c); break;
+            case '%': printf("%.2lf %c %.2lf = %d\n",a,op,c, (int)((int)a%(int)c)); break;
+            case '^': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, pow(a,c)); break;
+            case 'p': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, (tgamma(a+1))/(tgamma(a-c+1)*tgamma(c+1))); break;
+            case 'c': printf("%.2lf %c %.2lf = %.2lf\n",a,op,c, (tgamma(a+1))/(tgamma(a-c+1))); break;
+            case '!': printf("%.2lf %c = %.2lf\n",a,op, (tgamma(a+1))); break;
+            default: printf("Invalid operator\n");
+        }
     }
     int choich;
     printf("\n\n1.again\n0.menu\n");
+    clear();
     scanf("%d", &choich);
     switch (choich)
     {
@@ -444,7 +442,7 @@ void menu()
         mathGame();
         break;
     case 0:
-        exit(0);
+        quit();
     default:
         printf("wrong choice");
     }
