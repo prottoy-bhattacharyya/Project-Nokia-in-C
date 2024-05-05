@@ -6,6 +6,7 @@ Created by Prottoy Vhattacharyya, Turzo,  Sanjid Hossain joy and Rifa Sanjida
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <windows.h>
 
 void clear(void);
 void dictionary();
@@ -483,6 +484,7 @@ void password()
 }
 int main()
 {
+    SetConsoleOutputCP(CP_UTF8);
     loading();
     password();
 }
