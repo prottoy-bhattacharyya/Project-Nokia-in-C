@@ -1,7 +1,3 @@
-/*Project Nokia
-Created by Prottoy Vhattacharyya, Turzo,  Sanjid Hossain joy and Rifa Sanjida
-*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
