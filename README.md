@@ -28,7 +28,7 @@
 
 
 ## NOTE :
-> color text feature will only works on **windows** operating system
+> color text feature will only works on **windows** operating system\
 > To use the **dictionary** you must download the **dictionary.txt** file and paste it's address to the **fopen()** function.
 
 ## Here is a demo :
