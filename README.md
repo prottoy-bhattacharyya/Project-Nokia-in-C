@@ -19,7 +19,7 @@
 ![clock3](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/03df3ff5-e061-4ac9-acbd-3943912b7adf)\
 **Dicktionary** - Search in the **Dictionary.txt** file for the word and print the whole line\
 ![dictionary](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/c37ff405-3532-4f2d-a5c5-0e53bc9ca9bc)\
-**Math Game** - It will radomly generate math problems until you type "stop"\
+**Math Game** - It will radomly generate math problems until you type "**stop**"\
 ![game](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/1a50a592-8bbd-4253-9e40-999c56f14984)\
 **Name In Heart** - Print your name inside a Heart Shape\
 ![heart](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/a5f51441-0c71-4823-b9ca-a4b66deb48c3)\
