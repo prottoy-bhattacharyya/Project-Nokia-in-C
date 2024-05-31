@@ -1,7 +1,7 @@
 # Project Nokia
 
 
-# **Loading Screen**\
+## **Loading Screen**
 ![loading](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/64249c70-8bc5-4167-a7ea-904295f32cb2)\
 **Password**\
 ![pass](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/5297286b-69c8-4a78-9e39-00eefd1ea779)\
