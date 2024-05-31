@@ -25,7 +25,7 @@
 **Timer**\
 ![clock3](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/03df3ff5-e061-4ac9-acbd-3943912b7adf)\
 </br>
-**Dicktionary** - Search in the **Dictionary.txt** file for the word and print the whole line\
+**Dictionary** - Search in the **Dictionary.txt** file for the word and print the whole line\
 ![dictionary](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/c37ff405-3532-4f2d-a5c5-0e53bc9ca9bc)\
 </br>
 **Math Game** - It will radomly generate math problems until you type "**stop**"\
