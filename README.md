@@ -27,7 +27,7 @@
 ![exit](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/f83b3162-8094-4143-9589-453a5209d5c5)
 
 
-[!NOTE]
+>[!NOTE]
 > color text feature will only works on **windows** operating system\
 > To use the **dictionary** you must download the **dictionary.txt** file and paste it's address to the **fopen()** function.\
 > 
