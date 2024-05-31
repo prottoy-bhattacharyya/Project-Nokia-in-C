@@ -28,8 +28,9 @@
 
 
 > [!CAUTION]
-> color text feature will only works on **windows** operating system\
-> >[!NOTE]
+> color text feature will only works on **windows** operating system
+
+> [!NOTE]
 > To use the **dictionary** you must download the **dictionary.txt** file and paste it's address to the **fopen()** function.
 > 
     file = fopen("Dictionary file Address", "r");
