@@ -9,7 +9,7 @@
 ![wrongPass](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/2b68e722-222f-46c8-adeb-1c3baa77e0a0)\
 **Main Menu** - If password is correct\
 ![menu](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/b9f5fa92-8e00-4b6c-a751-33443ebf3845)\
-**Calculator** - can calculate +, -, *, /, factorial, permutation and combination\
+**Calculator** - can calculate +, -, *, /, **factorial, permutation and combination**\
 ![calc](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/746ee562-bd6d-4bfa-a920-ca9557bff737)\
 **Clock Home**\
 ![clock1](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/95beaf24-4a3e-48a8-91c3-ca6d43ff7c07)\
@@ -17,7 +17,7 @@
 ![clock2](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/49e378cf-e597-49c6-890a-50775e62adc2)\
 **Timer**\
 ![clock3](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/03df3ff5-e061-4ac9-acbd-3943912b7adf)\
-**Dicktionary** - Search in the Dictionary.txt file for the word and print the whole line\
+**Dicktionary** - Search in the **Dictionary.txt** file for the word and print the whole line\
 ![dictionary](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/c37ff405-3532-4f2d-a5c5-0e53bc9ca9bc)\
 **Math Game** - It will radomly generate math problems until you type "stop"\
 ![game](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/1a50a592-8bbd-4253-9e40-999c56f14984)\
