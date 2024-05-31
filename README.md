@@ -1,11 +1,11 @@
 # Project Nokia
 
 
-## **Loading Screen**
+**Loading Screen**
 ![loading](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/64249c70-8bc5-4167-a7ea-904295f32cb2)\
 **Password**\
 ![pass](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/5297286b-69c8-4a78-9e39-00eefd1ea779)\
-## **Wrong Password** - If password is Incorrect\
+**Wrong Password** - If password is Incorrect\
 ![wrongPass](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/2b68e722-222f-46c8-adeb-1c3baa77e0a0)\
 **Main Menu** - If password is correct\
 ![menu](https://github.com/prottoy-bhattacharyya/SDP-project/assets/83195575/b9f5fa92-8e00-4b6c-a751-33443ebf3845)\
