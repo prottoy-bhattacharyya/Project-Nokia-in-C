@@ -30,7 +30,7 @@
 > [!NOTE]
 > To use the **dictionary** you must download the **dictionary.txt** file and paste it's address to the **fopen()** function.
 > 
-    file = fopen("Dictionary file Address", "r");
+    file = fopen("[Dictionary file Address]", "r");
 
     Example :
     file = fopen("C:/Users/User/Desktop/pro/SDP-project-main/dictionary.txt", "r");
