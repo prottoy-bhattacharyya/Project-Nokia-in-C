@@ -17,7 +17,7 @@ void timer();
 void stopWatch();
 void mathGame();
 void quit();
-
+int errC = 0;
 void clear(void)
 {
     // while (getchar() != '\n'); // clear input buffer
@@ -238,7 +238,7 @@ void dictionary()
     }
 
     // Open the file for reading
-    file = fopen("C:/Users/User/Desktop/pro/dictionary.txt", "r");
+    file = fopen("C:/sdp/dictionary.txt", "r");
     // file = fopen("C:/Users/BUBT/Desktop/pro/dictionary.txt", "r");
     if (file == NULL)
     {
@@ -448,6 +448,15 @@ void menu()
 }
 void error()
 {
+    errC++;
+    if(errC == 3){
+        system("clear");
+        system("cls");
+        printf("Wrong password entered 3 times");
+        sleep(2);
+        exit(0);
+    }
+
     system("clear");
     system("cls");
     system("Color 0C");
@@ -473,10 +482,12 @@ void password()
     gets(pass);
     if (strcmp(name, "pro") == 0 && strcmp(pass, "pro123") == 0)
     {
+        
         menu();
     }
     else
     {
+        Beep(1000,300);
         error();
     }
 }
