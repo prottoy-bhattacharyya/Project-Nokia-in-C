@@ -238,7 +238,7 @@ void dictionary()
     }
 
     // Open the file for reading
-    file = fopen("C:/Users/User/Desktop/pro/SDP-project-main/dictionary.txt", "r");
+    file = fopen("C:/Users/User/Desktop/pro/dictionary.txt", "r");
     // file = fopen("C:/Users/BUBT/Desktop/pro/dictionary.txt", "r");
     if (file == NULL)
     {
@@ -442,7 +442,9 @@ void menu()
         quit();
     default:
         printf("wrong choice");
-    }
+        sleep(2);
+        menu();
+    } 
 }
 void error()
 {
