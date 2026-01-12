@@ -1469,6 +1469,7 @@
 |civilian|অসামরিক ব্যাক্তি
 |civilization|সভ্যতা
 |claim|দাবী
+|clan|সহজাতি
 |claim|দাবী করা
 |clarity|স্পষ্টতা
 |clash|সঙ্ঘর্ষ
